@@ -1,0 +1,27 @@
+--CREATE a clothing store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, color TEXT, brand TEXT);
+
+INSERT INTO store VALUES (1, "dress", 30, "blue", "kate");
+INSERT INTO store VALUES (2, "blouse", 12, "red", "marvel");
+INSERT INTO store VALUES (3, "shoes", 45, "black", "steven");
+INSERT INTO store VALUES (4, "socks", 5, "blue", "kate");
+INSERT INTO store VALUES (5, "rings", 12, "red", "marvel");
+INSERT INTO store VALUES (6, "bathrobe", 20, "black", "steven");
+INSERT INTO store VALUES (7, "jeans", 30, "blue", "kate");
+INSERT INTO store VALUES (8, "sweater", 24, "red", "marvel");
+INSERT INTO store VALUES (9, "jacket", 50, "black", "steven");
+INSERT INTO store VALUES (10, "gloves", 12, "blue", "kate");
+INSERT INTO store VALUES (11, "hat", 6, "red", "marvel");
+INSERT INTO store VALUES (12, "cardigan", 23, "black", "steven");
+INSERT INTO store VALUES (13, "tennis", 30, "blue", "kate");
+INSERT INTO store VALUES (14, "scarf", 10, "red", "marvel");
+INSERT INTO store VALUES (15, "shorts", 14, "black", "steven");
+
+--Display the database ordered by price. 
+SELECT * FROM store 
+WHERE price ORDER BY price ASC;
+
+--How many items are the same color?
+SELECT color, COUNT (*) FROM store 
+GROUP by color;
