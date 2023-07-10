@@ -80,7 +80,6 @@ ON cust.order_id = Feb.orderID
 WHERE Feb.Quantity > 2
 AND length(orderID) = 6
 AND orderID <> 'orderID'
----------------------------------
 
 #What were the orders in February between 02/13/19 00:00 and 02/18/19 00:00?
 
