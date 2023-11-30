@@ -1,0 +1,23 @@
+/*Order items from the most expensive to the least*/
+
+SELECT item_name, price
+FROM superstore
+ORDER BY price DESC;
+
+/*How much stock is there per categopry?*/
+
+SELECT category, SUM(stock_quantity) AS total_stock
+FROM superstore
+GROUP BY category;
+
+/*What is the average rating for items in the Kitchen Supplies category?*/
+
+SELECT AVG(average_rating) AS avg_rating_kitchen
+FROM superstore
+WHERE category = 'Kitchen Supplies';
+
+/*How many items are per category?*/
+
+SELECT category, COUNT(*) AS item_count
+FROM superstore
+GROUP BY category;
